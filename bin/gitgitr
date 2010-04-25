@@ -1,5 +1,8 @@
 #! /opt/perl/bin/perl
 
+use FindBin;
+use lib "$FindBin::RealBin/../lib";
+
 use App::Gitgitr::Cmd;
 
 if ( $ARGV[0] =~ /^-/ ) {
