@@ -92,7 +92,7 @@ class App::Gitgitr::Cmd::Command::build extends MooseX::App::Cmd::Command {
     say "*** extract" if $self->verbose;
     my $ae = Archive::Extract->new( archive => $self->_pkg_path );
     $ae->extract or die $ae->error;
-    unlink $self->_pkg;
+    unlink $self->_pkg_path;
   };
 
   method _configure {
