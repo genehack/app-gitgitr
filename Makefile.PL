@@ -4,6 +4,7 @@ use inc::Module::Install;
 
 name 'App-Gitgitr';
 all_from 'lib/App/Gitgitr/Cmd.pm';
+githubmeta;
 
 requires 'Archive::Extract';
 requires 'Carp';
