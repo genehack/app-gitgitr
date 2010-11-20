@@ -1,4 +1,6 @@
 #! /opt/perl/bin/perl
+# ABSTRACT: Automatically fetch and build the most recent git.
+# PODNAME: gitgitr
 
 use FindBin;
 use lib "$FindBin::RealBin/../lib";
