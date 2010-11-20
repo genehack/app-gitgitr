@@ -3,6 +3,7 @@ package App::Gitgitr::Cmd;
 use base 'App::Cmd::Simple';
 
 use strictures 1;
+use strict;
 use 5.010;
 
 use Archive::Extract;
