@@ -1,4 +1,4 @@
-package App::Gitgitr::Cmd;
+package App::GitGitr::Cmd;
 # ABSTRACT: GitGitr command support. See 'gitgitr'.
 use base 'App::Cmd::Simple';
 

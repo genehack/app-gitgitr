@@ -5,5 +5,5 @@
 use FindBin;
 use lib "$FindBin::RealBin/../lib";
 
-use App::Gitgitr::Cmd;
-App::Gitgitr::Cmd->run;
+use App::GitGitr::Cmd;
+App::GitGitr::Cmd->run;
