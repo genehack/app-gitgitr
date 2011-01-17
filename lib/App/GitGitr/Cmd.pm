@@ -33,7 +33,11 @@ sub execute {
   say "CURRENT VERSION: $version"
     if $opt->{verbose};
 
-  unless ( -e $install_dir ) {
+  if ( -e $install_dir ) {
+    $self->_symlink( $opt , $version );
+    say "Most recent version ($version) already installed at /opt/git";
+  }
+  else {
     chdir( '/tmp' )
       or die "Can't cd to /tmp";
 
@@ -47,17 +51,16 @@ sub execute {
     $self->_make_test( $opt ) if $opt->{run_tests};
     $self->_make_install( $opt );
     $self->_cleanup( $opt , $version );
+    $self->_symlink( $opt , $version );
 
     say "\n\nBuilt new git $version."
       if $opt->{verbose};
+    say "New version ($version) symlinked into /opt/git";
   }
 
   die "No new version?!"
     unless -e "/opt/git-$version";
 
-  $self->_symlink( $opt , $version );
-
-  say "New version ($version) symlinked into /opt/git";
 }
 
 sub _build_version {
