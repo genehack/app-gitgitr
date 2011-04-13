@@ -92,7 +92,7 @@ sub _configure {
   my( $self , $opt , $version , $install_dir ) = @_;
   say "*** configure" if $opt->{verbose};
   chdir "git-$version";
-  _run( "./configure --prefix=$install_dir" );
+  _run( "./configure --prefix=$install_dir --without-tcltk" );
 };
 
 sub _make {
