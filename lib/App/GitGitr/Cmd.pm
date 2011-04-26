@@ -92,6 +92,7 @@ sub _configure {
   my( $self , $opt , $version , $install_dir ) = @_;
   say "*** configure" if $opt->{verbose};
   chdir "git-$version";
+  ### FIXME should have some way to allow override of these args
   _run( "./configure --prefix=$install_dir --without-tcltk" );
 };
 
