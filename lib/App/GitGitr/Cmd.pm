@@ -14,6 +14,7 @@ use LWP::Simple;
 
 sub opt_spec {
   return (
+    [ "prefix|p"    => 'directory to install under (defaults to /opt/git-$VERSION)' ],
     [ "reinstall|r" => 'build even if installation directory exists (default=false)' ],
     [ "run_tests|t" => 'run "make test" after building' ] ,
     [ "verbose|V"   => 'be verbose about what is being done' ] ,
@@ -25,7 +26,7 @@ sub execute {
   my( $self , $opt , $args ) = @_;
 
   my $version     = $opt->{version} // _build_version();
-  my $install_dir = "/opt/git-$version";
+  my $install_dir = $opt->{prefix}  // "/opt/git-$version";
 
   say "CURRENT VERSION: $version"
     if $opt->{verbose};
