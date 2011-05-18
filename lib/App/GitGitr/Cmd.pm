@@ -2,6 +2,7 @@ package App::GitGitr::Cmd;
 # ABSTRACT: GitGitr command support. See 'gitgitr'.
 use base 'App::Cmd::Simple';
 
+use autodie qw/ :all /;
 use strictures 1;
 use strict;
 use 5.010;
@@ -38,8 +39,7 @@ sub execute {
     say "Most recent version ($version) already installed at /opt/git";
   }
   else {
-    chdir( '/tmp' )
-      or die "Can't cd to /tmp";
+    chdir( '/tmp' );
 
     say "BUILD/INSTALL git-$version"
       if $opt->{verbose};
@@ -132,8 +132,7 @@ sub _symlink {
 sub _run {
   my $arg = shift;
   $arg .= ' 2>&1 >/dev/null';
-  system( $arg ) == 0
-    or die "$arg failed ($?)";
+  system( $arg ) == 0;
 }
 
 1;
