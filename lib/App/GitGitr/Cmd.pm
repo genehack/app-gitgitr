@@ -14,6 +14,7 @@ use LWP::Simple;
 
 sub opt_spec {
   return (
+    [ "reinstall|r" => 'build even if installation directory exists (default=false)' ],
     [ "run_tests|t" => 'run "make test" after building' ] ,
     [ "verbose|V"   => 'be verbose about what is being done' ] ,
     [ "version|v"   => 'Which git version to build. Default = most recent' ] ,
@@ -29,7 +30,7 @@ sub execute {
   say "CURRENT VERSION: $version"
     if $opt->{verbose};
 
-  if ( -e $install_dir ) {
+  if ( -e $install_dir and ! $opt->{reinstall} ) {
     $self->_symlink( $opt , $version );
     say "Most recent version ($version) already installed at /opt/git";
   }
