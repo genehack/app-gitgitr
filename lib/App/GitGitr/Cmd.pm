@@ -24,7 +24,7 @@ sub opt_spec {
 sub execute {
   my( $self , $opt , $args ) = @_;
 
-  my $version = $opt->{version} // _build_version();
+  my $version     = $opt->{version} // _build_version();
   my $install_dir = "/opt/git-$version";
 
   say "CURRENT VERSION: $version"
