@@ -62,8 +62,9 @@ sub execute {
 
 sub _build_version {
   my $content = get( 'http://git-scm.com/' );
-  my( $version ) = $content =~ m|<div id="ver">v([\d\.]+)</div>|
-    or croak "Can't parse version from Git web page!";
+  ### FIXME switch to a real fucking parser, dumbass
+  my( $version ) = $content =~ m|<span class='version'>([\d\.]+)</span>|
+    or croak "Can't parse version from Git web page! $content";
   return $version;
 }
 
