@@ -40,6 +40,10 @@ way more often that you would like.
 
 Displays basically the same information you're currently soaking in.
 
+=item --no_symlink / -N
+
+Don't symlink /opt/git to the new build directory    
+    
 =item --prefix / -p
 
 Installation prefix for the current build. Defaults to
