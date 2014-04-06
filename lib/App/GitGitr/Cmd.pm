@@ -1,11 +1,12 @@
 package App::GitGitr::Cmd;
-# ABSTRACT: GitGitr command support. See 'gitgitr'.
-use base 'App::Cmd::Simple';
+# ABSTRACT: GitGitr command support. See C<gitgitr> for full documentation.
+use parent 'App::Cmd::Simple';
+
+use strict;
+use warnings;
+use 5.010;
 
 use autodie qw/ :all /;
-use strictures 1;
-use strict;
-use 5.010;
 
 use Archive::Extract;
 use Carp;

@@ -2,6 +2,9 @@
 # ABSTRACT: Automatically fetch and build the most recent git.
 # PODNAME: gitgitr
 
+use strict;
+use warnings;
+
 use FindBin;
 use lib "$FindBin::RealBin/../lib";
 
