@@ -4,7 +4,7 @@ App::GitGitr::Cmd - GitGitr command support. See 'gitgitr'.
 
 # VERSION
 
-version 0.2
+version 0.3
 
 # AUTHOR
 
