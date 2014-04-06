@@ -18,7 +18,7 @@ sub opt_spec {
     [ "reinstall|r" => 'build even if installation directory exists (default=false)' ],
     [ "run_tests|t" => 'run "make test" after building' ] ,
     [ "verbose|V"   => 'be verbose about what is being done' ] ,
-    [ "version|v"   => 'Which git version to build. Default = most recent' ] ,
+    [ "version|v=s" => 'Which git version to build. Default = most recent' ] ,
   );
 }
 
