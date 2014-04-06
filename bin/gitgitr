@@ -25,12 +25,12 @@ App::GitGitr::Cmd->run;
 
 =head1 DESCRIPTION
 
-gitgitr is a tiny utility to simplify building the most recent (or,
-really, any arbitrary) version of git. This is something you probably
-only really need if you're obsessive about running the most recent
-version of git, or if you maintain something like L<Git::Wrapper>,
-where the ability to quickly install a particular git version comes up
-way more often that you would like.
+C<gitgitr> is a tiny utility to simplify building the most recent (or,
+really, any arbitrary) version of C<git>. This is something you
+probably only really need if you're obsessive about running the most
+recent version of C<git>, or if you maintain something like
+L<Git::Wrapper>, where the ability to quickly install a particular
+C<git> version comes up way more often than you would like.
 
 =head1 OPTIONS
 
@@ -42,12 +42,12 @@ Displays basically the same information you're currently soaking in.
 
 =item --no_symlink / -N
 
-Don't symlink /opt/git to the new build directory    
+Don't symlink C</opt/git> to the new build directory    
     
 =item --prefix / -p
 
 Installation prefix for the current build. Defaults to
-/opt/git-$GIT_VERSION_NUMBER
+C</opt/git-$GIT_VERSION_NUMBER>
 
 =item --reinstall / -r
 
@@ -57,7 +57,7 @@ already preset.
 
 =item --run_tests / -t
 
-Makes C<gitgitr> run the git test suite after building and before
+Makes C<gitgitr> run the C<git> test suite after building and before
 installing. If the test suite fails, the build will not be
 installed. Disabled by default because the test suite takes a really
 long time to run.
@@ -68,8 +68,16 @@ Makes C<gitgitr> be a lot more chatty about what it's doing
 
 =item --version / -v
 
-Specifies what version of git to build. Defaults to the most recent
+Specifies what version of C<git> to build. Defaults to the most recent
 version as found on the front page of L<http://git-scm.com>
 
 =back
-    
+
+=head1 SEE ALSO
+
+=over 4
+
+=item * L<http://git-scm.com>
+
+=back
+

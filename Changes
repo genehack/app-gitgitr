@@ -2,6 +2,8 @@ Changes file for {{$dist->name}}
 
 {{$NEXT}}
 
+        Doc tweaks
+
 0.4       2014-04-06 12:20:14-07:00 America/Los_Angeles
 
         Added 'no_symlink' option
