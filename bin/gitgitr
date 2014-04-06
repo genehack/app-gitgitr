@@ -42,8 +42,8 @@ Displays basically the same information you're currently soaking in.
 
 =item --no_symlink / -N
 
-Don't symlink C</opt/git> to the new build directory    
-    
+Don't symlink C</opt/git> to the new build directory
+
 =item --prefix / -p
 
 Installation prefix for the current build. Defaults to
@@ -80,4 +80,3 @@ version as found on the front page of L<http://git-scm.com>
 =item * L<http://git-scm.com>
 
 =back
-
