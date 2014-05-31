@@ -83,8 +83,8 @@ sub _download {
   my( $self , $opt , $version ) = @_;
   say "*** download" if $opt->{verbose};
   my $pkg_path = sprintf "git-%s.tar.gz" , $version;
-  #my $url = sprintf "http://kernel.org/pub/software/scm/git/%s" , $pkg_path;
-  my $url = sprintf "http://git-core.googlecode.com/files/%s" , $pkg_path;
+  my $url = sprintf "https://kernel.org/pub/software/scm/git/%s" , $pkg_path;
+  #my $url = sprintf "http://git-core.googlecode.com/files/%s" , $pkg_path;
   my $ret = getstore( $url , $pkg_path );
   die $ret unless $ret eq '200';
   return $pkg_path;
