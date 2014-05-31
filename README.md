@@ -4,7 +4,7 @@ gitgitr - Automatically fetch and build the most recent git.
 
 # VERSION
 
-version 0.4
+version 0.5
 
 # SYNOPSIS
 
@@ -20,12 +20,12 @@ version 0.4
 
 # DESCRIPTION
 
-gitgitr is a tiny utility to simplify building the most recent (or,
-really, any arbitrary) version of git. This is something you probably
-only really need if you're obsessive about running the most recent
-version of git, or if you maintain something like [Git::Wrapper](https://metacpan.org/pod/Git::Wrapper),
-where the ability to quickly install a particular git version comes up
-way more often that you would like.
+`gitgitr` is a tiny utility to simplify building the most recent (or,
+really, any arbitrary) version of `git`. This is something you
+probably only really need if you're obsessive about running the most
+recent version of `git`, or if you maintain something like
+[Git::Wrapper](https://metacpan.org/pod/Git::Wrapper), where the ability to quickly install a particular
+`git` version comes up way more often than you would like.
 
 # OPTIONS
 
@@ -35,12 +35,12 @@ way more often that you would like.
 
 - --no\_symlink / -N
 
-    Don't symlink /opt/git to the new build directory    
+    Don't symlink `/opt/git` to the new build directory
 
 - --prefix / -p
 
     Installation prefix for the current build. Defaults to
-    /opt/git-$GIT\_VERSION\_NUMBER
+    `/opt/git-$GIT_VERSION_NUMBER`
 
 - --reinstall / -r
 
@@ -50,7 +50,7 @@ way more often that you would like.
 
 - --run\_tests / -t
 
-    Makes `gitgitr` run the git test suite after building and before
+    Makes `gitgitr` run the `git` test suite after building and before
     installing. If the test suite fails, the build will not be
     installed. Disabled by default because the test suite takes a really
     long time to run.
@@ -61,8 +61,12 @@ way more often that you would like.
 
 - --version / -v
 
-    Specifies what version of git to build. Defaults to the most recent
+    Specifies what version of `git` to build. Defaults to the most recent
     version as found on the front page of [http://git-scm.com](http://git-scm.com)
+
+# SEE ALSO
+
+- [http://git-scm.com](http://git-scm.com)
 
 # AUTHOR
 

@@ -2,6 +2,8 @@ Changes file for {{$dist->name}}
 
 {{$NEXT}}
 
+0.5       2014-05-31 11:41:30-07:00 America/Los_Angeles
+
         Doc tweaks
         Switch homepage to pretty version
         Use a real HTML parser to extract version
