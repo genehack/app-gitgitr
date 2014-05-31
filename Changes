@@ -4,6 +4,8 @@ Changes file for {{$dist->name}}
 
         Doc tweaks
         Switch homepage to pretty version
+        Use a real HTML parser to extract version
+        Switch back to kernel.org for downloads
 
 0.4       2014-04-06 12:20:14-07:00 America/Los_Angeles
 
