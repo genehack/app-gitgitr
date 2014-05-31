@@ -11,6 +11,7 @@ use autodie qw/ :all /;
 use Archive::Extract;
 use Carp;
 use File::Remove 'remove';
+use HTML::TreeBuilder::XPath;
 use LWP::Simple;
 
 sub opt_spec {
@@ -70,9 +71,11 @@ sub execute {
 
 sub _build_version {
   my $content = get( 'http://git-scm.com/' );
-  ### FIXME switch to a real fucking parser, dumbass
-  my( $version ) = $content =~ m|<span class='version'>([\d\.]+)</span>|
+  my $tree = HTML::TreeBuilder::XPath->new;
+  $tree->parse_content( $content );
+  my $version = $tree->findvalue('/html/body//span[@class="version"]')
     or croak "Can't parse version from Git web page! $content";
+  $version =~ s/^\s*//; $version =~ s/\s*$//;
   return $version;
 }
 
