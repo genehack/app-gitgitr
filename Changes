@@ -2,6 +2,8 @@ Changes file for {{$dist->name}}
 
 {{$NEXT}}
 
+0.6       2014-08-16 11:21:34-07:00 America/Los_Angeles
+
         CPAN DAY RELEASE!
 
 0.5       2014-05-31 11:41:30-07:00 America/Los_Angeles

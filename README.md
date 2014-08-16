@@ -4,7 +4,7 @@ gitgitr - Automatically fetch and build the most recent git.
 
 # VERSION
 
-version 0.5
+version 0.6
 
 # SYNOPSIS
 
