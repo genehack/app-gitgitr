@@ -2,6 +2,8 @@ Changes file for {{$dist->name}}
 
 {{$NEXT}}
 
+        Add compilation tests
+
 0.7       2015-03-28 21:02:10-07:00 America/Los_Angeles (TRIAL RELEASE)
 
 0.6       2014-08-16 11:21:34-07:00 America/Los_Angeles
