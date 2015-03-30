@@ -34,6 +34,12 @@ my %WriteMakefileArgs = (
     "strict" => 0,
     "warnings" => 0
   },
+  "TEST_REQUIRES" => {
+    "File::Spec" => 0,
+    "IO::Handle" => 0,
+    "IPC::Open3" => 0,
+    "Test::More" => "0.94"
+  },
   "VERSION" => "0.7",
   "test" => {
     "TESTS" => "t/*.t"
@@ -47,10 +53,14 @@ my %FallbackPrereqs = (
   "Carp" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Remove" => 0,
+  "File::Spec" => 0,
   "FindBin" => 0,
   "HTML::TreeBuilder::XPath" => 0,
+  "IO::Handle" => 0,
+  "IPC::Open3" => 0,
   "IPC::System::Simple" => 0,
   "LWP::Simple" => 0,
+  "Test::More" => "0.94",
   "autodie" => 0,
   "lib" => 0,
   "parent" => 0,
