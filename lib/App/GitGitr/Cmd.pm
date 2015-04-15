@@ -1,4 +1,5 @@
 package App::GitGitr::Cmd;
+
 # ABSTRACT: GitGitr command support. See C<gitgitr> for full documentation.
 use parent 'App::Cmd::Simple';
 
