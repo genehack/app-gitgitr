@@ -2,9 +2,13 @@ Changes file for {{$dist->name}}
 
 {{$NEXT}}
 
+        Doc tweak
+        Extra error checking
+        Remove FindBin stuff
+
 0.900     2015-04-14 21:14:43-07:00 America/Los_Angeles
 
-        No changes since last dev release. 
+        No changes since last dev release.
 
 0.8       2015-03-29 23:54:53-04:00 America/New_York (TRIAL RELEASE)
 

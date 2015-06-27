@@ -1,6 +1,7 @@
 package App::GitGitr::Cmd;
 
-# ABSTRACT: GitGitr command support. See C<gitgitr> for full documentation.
+# ABSTRACT: GitGitr command support. See L<gitgitr> for full documentation.
+
 use parent 'App::Cmd::Simple';
 
 use strict;
@@ -73,7 +74,8 @@ sub execute {
 sub _build_version {
   my $content = get( 'http://git-scm.com/' );
   my $tree = HTML::TreeBuilder::XPath->new;
-  $tree->parse_content( $content );
+  $tree->parse_content( $content )
+    or croak "Failed to parse content from Git web page!";
   my $version = $tree->findvalue('/html/body//span[@class="version"]')
     or croak "Can't parse version from Git web page! $content";
   $version =~ s/^\s*//; $version =~ s/\s*$//;
