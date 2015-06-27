@@ -5,8 +5,8 @@
 use strict;
 use warnings;
 
-use App::GitGitr::Cmd;
-App::GitGitr::Cmd->run;
+use App::GitGitr;
+App::GitGitr->run;
 
 =head1 SYNOPSIS
 

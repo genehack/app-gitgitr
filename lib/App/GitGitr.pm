@@ -1,4 +1,4 @@
-package App::GitGitr::Cmd;
+package App::GitGitr;
 
 # ABSTRACT: GitGitr command support. See L<gitgitr> for full documentation.
 
