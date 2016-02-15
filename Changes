@@ -2,6 +2,8 @@ Changes file for {{$dist->name}}
 
 {{$NEXT}}
 
+  Update copyright notice
+
 0.903     2016-02-15 09:59:11-08:00 America/Los_Angeles
 
   Don't use OpenSSL on MacOS X
