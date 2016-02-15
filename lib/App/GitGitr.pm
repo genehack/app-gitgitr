@@ -106,7 +106,10 @@ sub _configure {
   say "*** configure" if $opt->{verbose};
   chdir "git-$version";
   ### FIXME should have some way to allow override of these args
-  _run( "./configure --prefix=$install_dir --without-tcltk" );
+  my $cmd = "./configure --prefix=$install_dir --without-tcltk";
+  # MacOS doesn't have openssl.h anymore, i guess?
+  $cmd   .= " --without-openssl" if $^O eq 'darwin';
+  _run( $cmd );
 };
 
 sub _make {

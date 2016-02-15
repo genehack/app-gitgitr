@@ -2,6 +2,8 @@ Changes file for {{$dist->name}}
 
 {{$NEXT}}
 
+  Don't use OpenSSL on MacOS X
+
 0.902     2015-06-27 13:53:01-07:00 America/Los_Angeles
 
   Move App::GitGitr::Cmd to App::GitGitr. Should make PAUSE happier.
