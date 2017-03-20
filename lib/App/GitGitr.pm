@@ -37,13 +37,13 @@ sub execute {
     if $opt->{verbose};
 
   if ( -e $install_dir and ! $opt->{reinstall} ) {
-      if( $opt->{no_symlink} ) {
-          say "Most recent version ($version) already installed.";
-      }
-      else {
-        $self->_symlink( $opt , $version );
-        say "Most recent version ($version) already installed. /opt/git redirected to that version";
-      }
+    if( $opt->{no_symlink} ) {
+      say "Most recent version ($version) already installed.";
+    }
+    else {
+      $self->_symlink( $opt , $version );
+      say "Most recent version ($version) already installed. /opt/git redirected to that version";
+    }
   }
   else {
     chdir( '/tmp' );
