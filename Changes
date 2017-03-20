@@ -2,6 +2,8 @@ Changes file for {{$dist->name}}
 
 {{$NEXT}}
 
+0.904     2017-03-20 15:01:45-07:00 America/Los_Angeles
+
   Update copyright notice
 
 0.903     2016-02-15 09:59:11-08:00 America/Los_Angeles
