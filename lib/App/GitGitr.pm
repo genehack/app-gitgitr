@@ -14,7 +14,7 @@ use Archive::Extract;
 use Carp;
 use File::Remove 'remove';
 use HTML::TreeBuilder::XPath;
-use LWP::Simple;
+use HTTP::Tiny;
 
 sub opt_spec {
   return (
@@ -72,13 +72,21 @@ sub execute {
 }
 
 sub _build_version {
-  my $content = get( 'http://git-scm.com/' );
+  my $response = HTTP::Tiny->new->get('http://git-scm.com/');
+  unless ( $response->{success} ) {
+    my $error = sprintf "Failed to fetch content from Git web page!\nSTATUS: %s REASON: %s" ,
+      $response->{status}, $response->{reason};
+    croak $error;
+  }
+
   my $tree = HTML::TreeBuilder::XPath->new;
-  $tree->parse_content( $content )
+  $tree->parse_content( $response->{content} )
     or croak "Failed to parse content from Git web page!";
+
   my $version = $tree->findvalue('/html/body//span[@class="version"]')
-    or croak "Can't parse version from Git web page! $content";
+    or croak "Can't parse version from Git web page!";
   $version =~ s/^\s*//; $version =~ s/\s*$//;
+
   return $version;
 }
 
