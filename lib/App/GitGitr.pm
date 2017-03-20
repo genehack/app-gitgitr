@@ -92,12 +92,21 @@ sub _build_version {
 
 sub _download {
   my( $self , $opt , $version ) = @_;
+
   say "*** download" if $opt->{verbose};
+
   my $pkg_path = sprintf "git-%s.tar.gz" , $version;
+
   my $url = sprintf "https://kernel.org/pub/software/scm/git/%s" , $pkg_path;
   #my $url = sprintf "http://git-core.googlecode.com/files/%s" , $pkg_path;
-  my $ret = getstore( $url , $pkg_path );
-  die $ret unless $ret eq '200';
+
+  my $response = HTTP::Tiny->new->mirror( $url , $pkg_path );
+  unless ( $response->{success} ) {
+    my $message = sprintf "DOWNLOAD FAILED!\n** STATUS: %s REASON: %s",
+      $response->{status}, $response->{reason};
+    croak $message;
+  }
+
   return $pkg_path;
 };
 
