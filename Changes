@@ -2,6 +2,8 @@ Changes file for {{$dist->name}}
 
 {{$NEXT}}
 
+  Switch from LWP::Simple to HTTP::Tiny
+
 0.904     2017-03-20 15:01:45-07:00 America/Los_Angeles
 
   Update copyright notice
@@ -48,7 +50,7 @@ Changes file for {{$dist->name}}
         Documentation (thanks to Tom Metro for the asskick)
         Update dist.ini to generate Makefile.PL in repo
         Update dist.ini to generate README.md in build & repo
-        
+
 0.3       2014-04-05 23:41:32-07:00 America/Los_Angeles
 
         Dummy App::GitGitr package
